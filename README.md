@@ -1,5 +1,4 @@
-# ubuntu-image
-# docker Image for pull requests
+
 
 FROM node:9.4.0-alpine
 COPY app.js .
