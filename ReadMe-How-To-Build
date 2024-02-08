@@ -1,0 +1,23 @@
+Run the following command to build the image:
+
+docker build . -t myimage:v1
+
+List images to see your image tagged myimage:v1 in the table.
+
+docker images
+
+Now that your image is built, run it as a container with the following command:
+
+docker run -dp 8080:8080 myimage:v1
+
+Run the curl command to ping the application as given below.
+
+curl localhost:8080
+
+Now to stop the container we use docker stop followed by the container id. The following command uses docker ps -q to pass in the list of all running containers:
+
+docker stop $(docker ps -q)
+
+Check if the container has stopped by running the following command.
+
+docker ps
