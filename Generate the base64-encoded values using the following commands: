@@ -1,0 +1,4 @@
+echo -n 'mysql-service' | base64
+echo -n 'your_db_user' | base64
+echo -n 'your_db_password' | base64
+echo -n 'your_wordpress_database' | base64
