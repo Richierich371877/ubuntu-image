@@ -1,0 +1,5 @@
+# Generate the base64-encoded values using the following commands
+echo -n 'your_mysql_root_password' | base64
+echo -n 'your_database_name' | base64
+echo -n 'your_db_user' | base64
+echo -n 'your_db_password' | base64
