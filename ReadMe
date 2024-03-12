@@ -1,0 +1,51 @@
+# MySQL and WordPress Deployment in Kubernetes
+
+This repository contains YAML configurations for deploying MySQL and WordPress in Kubernetes. It includes configurations for data persistence, secure handling of sensitive information, and additional annotations for security and reliability.
+
+## Overview
+
+The deployment consists of two main components:
+
+1. MySQL: A relational database management system used for storing WordPress data.
+2. WordPress: A content management system used for creating and managing websites.
+
+## Prerequisites
+
+Before deploying, ensure you have the following:
+
+- Access to a Kubernetes cluster.
+- Kubernetes Dashboard or `kubectl` configured to manage the cluster.
+- Base64-encoded passwords for MySQL and WordPress.
+
+## Deployment Steps
+
+Follow these steps to deploy MySQL and WordPress in your Kubernetes cluster:
+
+1. **Create Secrets:**
+   - Create Kubernetes Secrets for MySQL and WordPress. Use base64-encoded passwords for sensitive information.
+
+2. **Persistent Storage:**
+   - Create Persistent Volumes (PVs) and Persistent Volume Claims (PVCs) for MySQL to ensure data persistence.
+
+3. **Deploy MySQL:**
+   - Deploy MySQL using the provided Deployment and Service YAML files.
+
+4. **Deploy WordPress:**
+   - Deploy WordPress using the provided Deployment and Service YAML files. Ensure the WordPress deployment has the necessary environment variables to connect to MySQL.
+
+5. **Access WordPress:**
+   - Access the WordPress application through the LoadBalancer service created. Use the provided external IP address to access the WordPress site.
+
+## Files Included
+
+- `mysql-secrets.yaml`: Kubernetes Secret for MySQL credentials.
+- `mysql-pv.yaml`: PersistentVolume configuration for MySQL data.
+- `mysql-pvc.yaml`: PersistentVolumeClaim configuration for MySQL data.
+- `mysql-deployment.yaml`: Deployment configuration for MySQL.
+- `mysql-service.yaml`: Service configuration for MySQL.
+- `wordpress-secrets.yaml`: Kubernetes Secret for WordPress credentials.
+- `wordpress-deployment.yaml`: Deployment configuration for WordPress.
+- `wordpress-service.yaml`: Service configuration for WordPress.
+
+
+
